@@ -6,6 +6,10 @@
     <%= f.text_field :name %>
   </p>
    <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+   <p>
     <%= f.label :year%>
     <%= select("student", "year", ["0T7", "0T8", "0T9", "1T0", "1T1", "1T2"], :selected => "1T1") %>
   </p>

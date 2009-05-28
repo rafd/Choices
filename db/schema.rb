@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090528002121) do
+ActiveRecord::Schema.define(:version => 20090528025238) do
 
   create_table "committees", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20090528002121) do
     t.string   "password",   :default => ""
     t.boolean  "verified",   :default => false
     t.boolean  "special",    :default => false
+    t.string   "email"
   end
 
 end
