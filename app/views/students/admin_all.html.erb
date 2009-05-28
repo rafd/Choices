@@ -1,0 +1,10 @@
+<div class="column">
+<dl>
+<dt>All</dt>
+<% @students.each do |s| %>
+  <dd <%= "class=\"verified\"" if s.verified %>>
+    <%= link_to s.name, :action=>"su_edit", :id => s%> <%= link_to 'X', s, :confirm => 'Are you sure?', :method => :delete%>
+  </dd>
+<% end %>
+</dl>
+</div>

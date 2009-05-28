@@ -1,0 +1,178 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+
+
+body {
+  margin: 0 1em;
+  font-size: 78%;
+  line-height: 1.5em;
+
+  }
+
+h1 {
+  	width: 60%;
+  	line-height: 65px;    
+	height: 100px;
+	text-indent: 125px;
+	background: url(/images/minilogo.png) no-repeat;
+	margin: 0 0 -15px 0;
+  }
+
+.instruction {
+  position: absolute;
+  top: 1.25em;
+  right: 1em;
+  font-size: 1.5em;
+  line-height: 1em;
+  width: 35%;
+  text-align: right;
+  }
+
+.column {
+  float: left;
+  width: 17.5%;
+  margin: 0 2% 0 0;
+  min-width: 175px;
+  }
+  dl {
+    background: #eee;
+    margin: 0 0 1em 0;
+    position: relative;
+    padding: 0 0 0.5em 0;
+    }
+    .prediction {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0.6em 1em;
+	    color: #fff;
+      }
+      .prediction span {
+	      color: #444;
+	      }
+    dt {
+      font-weight: bold;
+      margin: 0 0 0.25em 0;
+      font-size: 1.2em;
+      color: #fff;
+      padding: 0.5em;
+      font-variant: small-caps;
+      }
+	  .type1 dt {
+	  	background: #4b0a5e;
+		border-left: 5px solid #791098;
+	  }
+	  .type2 dt {
+	  	background: #791098;
+		border-left: 5px solid #4b0a5e;
+		font-size: 1em;
+	  }
+	  dt a, dt a:visited, dt a:hover {
+	  	color: #fff;
+		text-decoration: none;
+		background: none;
+	  }
+	  dt a:hover {
+	  	text-decoration: underline;
+	  }
+      dd {
+	      margin: 0 1em;
+	      font-size: 0.9em;
+	      position: relative;
+        }  
+        dd a {
+          text-decoration: none;
+          }
+	    dd.special {
+	    	font-weight: bold;
+		    }
+em {
+  font-size: 0.75em;
+}
+dd em {
+  color: green;
+	position: absolute;
+	right: 0;
+}
+
+.missing dd a em {
+  display: none;
+  }
+  .missing dd a:hover em {
+    display: inline;
+    }
+
+label {
+  font-weight: bold;
+}
+
+.verified {
+  font-style: italic;
+}
+
+.message {
+  margin: 1.5em 0 0 0;
+  }
+
+
+.credit {
+  margin: 10em 0 0 0;
+  width: 100%;
+  }
+  .credit div {
+    border: 1px #ccc solid;
+    padding: 0.5em;
+    background: #fff;
+    margin: 0 0 1em 0;
+    }

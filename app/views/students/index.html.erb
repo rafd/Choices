@@ -1,0 +1,62 @@
+<h1>F!rosh Group Sign Up</h1>
+
+<div class="instruction">
+  <em><%= @students_count %> students so far... </em>
+  <%= link_to 'Add Yourself!', new_student_path %> <br/>
+</div>
+
+<% @count = 0 %>
+
+<% Array.[](@groups, @committees).each do |parent| %>
+
+<div class="type<%= (@count += 1) %>"> 
+
+<% @height = 0; %>
+
+<div class="column">
+	
+	<% @students_count = 0
+	   parent.each do |o| @students_count += o.students_count end %>
+	<% @max_height = (@students_count+3*parent.length) / 5 + 2 %>
+	  
+<% parent.each do |option| %>
+	<% @height += option.students_count + 3 %>
+	
+	<% if @height >= @max_height %>
+		<%= "</div>\n<div class=\"column\">" %>
+		<% @height = option.students_count %>
+	<% end %>
+	
+	<dl>
+	  <div class="prediction"><%= option.students_count %></div>
+	  <dt><%= link_to option.name, :action=>"new", :id=>option.id %></dt>
+	  <% option.students.each do |student| %>
+	    <dd<%= " class=\"special\"" if student.special %>>
+	      <%= link_to student.name, edit_student_path(student)%><% ", "+student.year if student.year %>
+	        <% if student.created_at > 3.hours.ago || @recent_students.include?(student) %>
+	           <%= "<em>New!</em>" %>
+	        <% elsif student.updated_at > 5.hours.ago %>
+	           <%= "<em>Updated!</em>" %>
+	       <% end %> 
+	    </dd>
+	  <% end %>
+	</dl>
+<% end %>
+</div>
+
+<br style="clear:both"/>
+
+</div>
+<% end %>
+
+
+<div class="credit">
+  <div style="float: right">
+    App courtesy <%= link_to "Rafal Dittwald", "http://rafal.dittwald.com/" %>. <br />
+    <em>Problems? contact Raf at: rafal [*dot*] dittwald [*at*] gmail [*dot*] com</em>
+  </div>
+</div>
+
+<style>body { background: url(http://orientation.skule.ca/minisite/drips.png) right bottom  no-repeat; }</style>
+
+

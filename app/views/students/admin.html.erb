@@ -1,0 +1,40 @@
+<%= link_to "Home", :controller => 'students' %>
+
+<div style="font-size: 5em; line-height: 1.5em;">
+  <%= @students.length %>
+</div>
+<div class="column">
+<dl>
+<dt>Recent Additions</dt>
+<% @added.each do |s| %>
+  <dd>
+    <%= link_to s.name, :action=>"su_edit", :id => s%> <%= link_to 'X', s, :confirm => 'Are you sure?', :method => :delete%>
+  </dd>
+<% end %>
+</dl>
+</div>
+
+<div class="column">
+<dl>
+<dt>Recent Updates</dt>
+<% @updated.each do |s| %>
+  <dd>
+    <%= link_to s.name, :action=>"su_edit", :id => s%> <%= link_to 'X', s, :confirm => 'Are you sure?', :method => :delete%>
+  </dd>
+<% end %>
+</dl>
+</div>
+<div class="column">
+<dl>
+<dt>To Verify</dt>
+<% @students.each do |s| %>
+  <% unless s.verified %>
+  <dd>
+    <%= link_to s.name, :action=>"su_edit", :id => s%> <%= link_to 'X', s, :confirm => 'Are you sure?', :method => :delete%>
+  </dd>
+  <% end %>
+<% end %>
+</dl>
+</div>
+
+

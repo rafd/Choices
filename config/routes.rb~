@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :students
   
   map.connect 'admin', :controller => 'students', :action => 'admin'
-  map.connect 'admin_all', :controller => 'students', :action => 'admin_all'
+  map.connect 'missing', :controller => 'students', :action => 'missing'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

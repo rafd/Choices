@@ -1,0 +1,39 @@
+<h1>Change Someone!</h1>
+<% form_for(@student) do |f| %>
+  <%= f.error_messages %>
+ <p>
+    <%= f.label :real_name %><br />
+    <%= f.text_field :name %>
+  </p>
+   <p>
+    <%= f.label :year%>
+    <%= select("student", "year", ["0T7", "0T8", "0T9", "1T0", "1T1", "1T2"], :selected => "1T1") %>
+  </p>
+  <p>
+    <%= f.label :option_id, "F!rosh Group" %><br />
+    <%= collection_select(:student, :option_id, @groups, :id, :name, {}, {:size => 9}) %> <br />
+  </p>
+  <p>
+    <%= f.label :option_id, "Committee" %><br />
+    <%= collection_select(:student, :option_id, @committees, :id, :name, {}, {:size => 9}) %> <br />
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= password_field(:student, :password, :size => 20) %>
+
+  </p>
+   <p>
+    <%= f.label :verified %>
+    <%= check_box(:student, :verified) %> 
+  </p>
+ <p>
+    <%= f.label :special %>
+    <%= check_box(:student, :special) %> 
+  </p>
+  
+  <p>
+  <%= f.submit "Go!" %> | <%= link_to 'Cancel', :action => "su_edit" %>
+  </p>
+ 
+<% end %>
+ 
